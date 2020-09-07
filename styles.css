@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Blender Pro";
+  src: url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.eot");
+  src: url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.svg#Blender Pro")
+      format("svg");
+}
+
+
+body, html {
+    
+    margin: 0;
+    height: 100%;
+    background-color: #0c141b;
+  }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #0c141b;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      font-family: "Blender Pro";
+      
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: rgb(59, 63, 28);
+    }
+    
+    .active {
+      background-color: #dc1327;
+    }
+  
+    .bg-image {
+        /* The image used */
+        
+        margin-top: 50px;
+        background-image: url("./bg.jpg");
+        
+        /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        
+        /* Full height */
+        height: 100%; 
+        
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        
+      }
+
+      .bg-text {
+      
+        color: white;
+        
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+      }
