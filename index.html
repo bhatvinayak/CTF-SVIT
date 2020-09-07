@@ -1,97 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CTF-SVIT</title>
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./styles.css">
-  <title>Web App</title>
-</head>
-
-<body onload="loader()">
-  <div class="loader" id="loader">
-    <div id="console">
+  <body onload="loader()">
+    <div class="loader" id="loader">
+      <div id="console"></div>
     </div>
-  </div>
-  <div id="main">
-    <div>
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">Challenges</a></li>
-        <li><a href="#contact">About</a></li>
-        <li style="float:right"><a href="#about">Login</a></li>
-      </ul>
-    </div>
-
-    <div class="bg-image">
-
-    </div>
-
-    <div class="bg-text">
-      <h2>So, you're here!!</h2>
-      <div class="content">
-        <h1 class="text" data-text="I am deltax">
-          I am deltax</h1>
+    <div id="main">
+      <div>
+        <ul id="navbar">
+          <li id="nav"><a class="active" href="#home">Home</a></li>
+          <li id="nav"><a href="#challenges">Challenges</a></li>
+          <li id="nav"><a href="#about">About</a></li>
+          <li id="nav" style="float: right"><a href="#login">Login</a></li>
+        </ul>
       </div>
-      <p>And you'll follow my instructions!</p>
+
+      <div class="content">
+        <p>
+          Hello,
+          <button onclick="typeWriter('So you are finally here!!', 10, 's2')">
+            Say Hello
+          </button>
+        </p>
+        <p id="s2"></p>
+        <button onclick="typeWriter(' I am deltax.....', 50, 's3')">
+          Yes I am, who are you?
+        </button>
+        <p id="s3"></p>
+        <button
+          onclick="typeWriter('And the only option you have is to follow me!', 50, 's4')"
+        >
+          and
+        </button>
+        <p id="s4"></p>
+        <button>I dont know what are you saying!!</button>
+      </div>
     </div>
-    jhfvsjbs
-    jsbh
-  </div>
-</body>
-<script>
-  document.getElementById('main').style = "display: none";
-  function loader() {
-    setTimeout(loaded, 5000);
-  }
-  function loaded() {
-    document.getElementById('loader').style = "display: none;";
-    document.getElementById('main').style = "display: inherited";
-  }
-  var intervalID = window.setInterval(updateScreen, 200);
-var c = document.getElementById("console");
+  </body>
+  <link rel="javascript" href="./index.js" />
+  <script>
+    document.getElementById("main").style = "display: none";
+    function loader() {
+      setTimeout(loaded, 5000);
+    }
+    function loaded() {
+      document.getElementById("loader").style = "display: none;";
+      document.getElementById("main").style = "display: inherited";
+    }
+    var intervalID = window.setInterval(updateScreen, 200);
+    var c = document.getElementById("console");
 
-var txt = [
-  "FORCE: XX0022. ENCYPT://000.222.2345",
-  "TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1",
-  "RETRY: REINDEER FLOTILLA",
-  "Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0",
-  "================================================",
-  "Priority 1 // local / scanning...",
-  "scanning ports...",
-  "BACKDOOR FOUND (23.45.23.12.00000000)",
-  "BACKDOOR FOUND (13.66.23.12.00110000)",
-  "BACKDOOR FOUND (13.66.23.12.00110044)",
-  "...",
-  "...",
-  "BRUTE.EXE -r -z",
-  "...locating vulnerabilities...",
-  "...vulnerabilities found...",
-  "MCP/> DEPLOY CLU",
-  "SCAN: __ 0100.0000.0554.0080",
-  "SCAN: __ 0020.0000.0553.0080",
-  "SCAN: __ 0001.0000.0554.0550",
-  "SCAN: __ 0012.0000.0553.0030",
-  "SCAN: __ 0100.0000.0554.0080",
-  "SCAN: __ 0020.0000.0553.0080",
-]
+    var txt = [
+      "FORCE: XX0022. ENCYPT://000.222.2345",
+      "TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1",
+      "RETRY: REINDEER FLOTILLA",
+      "Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0",
+      "================================================",
+      "Priority 1 // local / scanning...",
+      "scanning ports...",
+      "BACKDOOR FOUND (23.45.23.12.00000000)",
+      "BACKDOOR FOUND (13.66.23.12.00110000)",
+      "BACKDOOR FOUND (13.66.23.12.00110044)",
+      "...",
+      "...",
+      "BRUTE.EXE -r -z",
+      "...locating vulnerabilities...",
+      "...vulnerabilities found...",
+      "MCP/> DEPLOY CLU",
+      "SCAN: __ 0100.0000.0554.0080",
+      "SCAN: __ 0020.0000.0553.0080",
+      "SCAN: __ 0001.0000.0554.0550",
+      "SCAN: __ 0012.0000.0553.0030",
+      "SCAN: __ 0100.0000.0554.0080",
+      "SCAN: __ 0020.0000.0553.0080",
+    ];
 
-var docfrag = document.createDocumentFragment();
+    var docfrag = document.createDocumentFragment();
 
-function updateScreen() {
-  //Shuffle the "txt" array
-  txt.push(txt.shift());
-  //Rebuild document fragment
-  txt.forEach(function(e) {
-    var p = document.createElement("p");
-    p.textContent = e;
-    docfrag.appendChild(p);
-  });
-  //Clear DOM body
-  while (c.firstChild) {
-    c.removeChild(c.firstChild);
-  }
-  c.appendChild(docfrag);
-}
-</script>
+    function updateScreen() {
+      //Shuffle the "txt" array
+      txt.push(txt.shift());
+      //Rebuild document fragment
+      txt.forEach(function (e) {
+        var p = document.createElement("p");
+        p.textContent = e;
+        docfrag.appendChild(p);
+      });
+      //Clear DOM body
+      while (c.firstChild) {
+        c.removeChild(c.firstChild);
+      }
+      c.appendChild(docfrag);
+    }
 
+    function typeWriter(txt, speed, id) {
+      var i = 0;
+      if (i < txt.length) {
+        document.getElementById(id).innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
 </html>
