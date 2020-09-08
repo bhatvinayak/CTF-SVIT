@@ -2,7 +2,7 @@
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 @font-face {
 	font-family: 'Blender Pro';
-	src: url('./font.ttf');
+	src: url('./font.otf');
   }
 .demo-1 {
 	--primary: limegreen;
