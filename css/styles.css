@@ -33,7 +33,11 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-
+.loader{
+	background-color: #000;
+	width: 100vw;
+	height: 100vh;
+}											
 .content__title {
 	color: #fff;
 	font-size: 10vw;
@@ -74,7 +78,9 @@
 	width: var(--glitch-width);
 	height: var(--glitch-height);
 	overflow: hidden;
+	z-index: 0;
 }
+
 
 .glitch__img {
 	position: absolute;
@@ -416,3 +422,38 @@ p{
 	  position: relative;
 	  z-index: 2;
   }
+.brand{
+	width: 10vw;
+}
+.brand>a{
+	font-weight: bold;
+	font-size: 32px;
+}
+.links{
+	width: 70vw;
+}
+.navbar{
+	background-color: rgba(51, 46, 46, 0.623) !important;
+	z-index: 2;
+	margin-top: 1vw;
+}
+a:hover{
+	color: lime;
+}
+
+.nav-link{
+	color: limegreen;
+	font-size: 24px;
+}
+.nav-link.active{
+	color: limegreen !important;	
+	background-color: transparent !important;
+	border: 3px solid lime;
+    box-shadow: 0 0 15px -1px lime, 
+    0 0 12px -1px lime  inset;
+}
+.tab-pane.active{
+	color: white !important;
+	z-index: 2;
+	position: relative;
+}
