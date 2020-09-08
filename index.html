@@ -44,8 +44,6 @@
   <body class="demo-1 loading">
     
     <main>
-      
-     
       <div class="content">
         <div class="glitch">
           <div class="glitch__img"></div>
@@ -58,8 +56,73 @@
         <p class="content__text">
           Web project demonstrating CTF.
         </p>
+        <div id="s2" class="typewriter-text" >
+        </div>
+
+        <button onclick="typeWriter('s2',this)" data-disp="I am deltax.....">Click me</button>
+
+        <div id="s3" class="typewriter-text" >
+        </div>
+        <button onclick="typeWriter('s3',this)" data-disp="Yes I am, who are you?">Click me</button>
       </div>
     </main>
+    <script>document.getElementById("main").style = "display: none";
+      function loader() {
+        setTimeout(loaded, 5000);
+      }
+      function loaded() {
+        document.getElementById("loader").style = "display: none;";
+        document.getElementById("main").style = "display: inherited";
+      }
+  
+      var intervalID = window.setInterval(updateScreen, 200);
+      var c = document.getElementById("console");
+  
+      var txt = [
+        "* Starting conf your network device security Starting Bridge socket events into upstart           [OK]",
+        "* Starting configure network device - Stopping cold plug devices                                  [OK]",
+        "* Stopping log initial device creation                                                            [OK]",
+        "* Starting load fallback graphics devices                                                         [OK]",
+        "* Starting configure virtual network devices Stopping load fallback graphics devices              [OK]",
+        "* Stopping configure virtual network devices                                                      [OK]",
+        "* Starting configure network device security                                                      [OK]",
+        "* Starting Userspace bootsplash Stopping Userspace bootsplash Starting Mount network Filesystems  [OK]",
+        "* Stopping Mount network Filesystems                                                              [OK]",
+        "* Starting System V installation compatibility                                                    [OK]",
+        "* Starting configure network device                                                               [OK]",
+        "* Starting Apparmor profiles                                                                      [OK]",
+        "* Checking for running unattended-upgrades                                                        [OK]",
+        "* Stopping System V Installation compa                                                            [OK]",
+        "* Starting System V runlevel compatibility                                                        [OK]",
+        "* Stopping automatic crash report generation                                                      [OK]",
+        "* Starting CPU Interrupts balancing daemon                                                        [OK]",
+        "* Starting deferred execution scheduler                                                           [OK]",
+        "* Starting regular background program processing daemon                                           [OK]",
+        "* Starting Light Display Manager                                                                  [OK]",
+        "* Starting anachronistic cron                                                                     [OK]",
+        "* Starting see kernel messages                                                                    [OK]",
+        "* Stopping saue kernel messages                                                                   [OK]",
+        "* Pulseaudio configured for per-user sessions                                                     [OK]",
+        "* Stopping Susten Runlevel compatibility                                                          [OK]"
+      ];
+  
+      var docfrag = document.createDocumentFragment();
+  
+      function updateScreen() {
+        //Shuffle the "txt" array
+        txt.push(txt.shift());
+        //Rebuild document fragment
+        txt.forEach(function (e) {
+          var p = document.createElement("p");
+          p.textContent = e;
+          docfrag.appendChild(p);
+        });
+        //Clear DOM body
+        while (c.firstChild) {
+          c.removeChild(c.firstChild);
+        }
+        c.appendChild(docfrag);
+      }</script>
     <script src="./js/imagesloaded.pkgd.min.js"></script>
     <script src="./js/index.js"></script>
   </body>

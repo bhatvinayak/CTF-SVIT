@@ -40,3 +40,18 @@
 		document.body.classList.add('imgloaded');
 	});
 }
+    var i = 0;
+var speed = 50;
+
+function typeWriter(id,ele,width) {
+  var txt=ele.getAttribute("data-disp");
+  document.getElementById(id).style.visibility="visible"
+  document.getElementById(id).style.width=txt.length+"ch"
+  document.getElementById(id).style.animation="typing 3s steps(21, end),  blink-caret .5s step-end infinite alternate"
+  if (i < txt.length) {
+    document.getElementById(id).innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter(id,ele), speed);
+  }
+  if(i==txt.length) i=0;
+}
