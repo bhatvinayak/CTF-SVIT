@@ -46,8 +46,7 @@
 	position: absolute;
 	font-size: 1.5em;
 	color: #fff;
-	top: 4em;
-	right: 10vw;
+	margin: 35vh 0 0 55vw;
 	max-width: 500px;
 	text-align: right;
 	font-weight: 400;
@@ -388,5 +387,10 @@
 		opacity: 0;
 		transform: translate3d(0, 0, 0);
 	}
+}
+
+.container {
+	font-family: "Blender Pro";
+	color: #fff;
 }
 
