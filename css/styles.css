@@ -464,7 +464,7 @@ a:hover{
 	border: 3px solid var(--seconadry);
     box-shadow: 0 0 15px -1px var(--seconadry), 
 	0 0 12px -1px var(--seconadry)  inset;
-	text-shadow: 1px 1px 10px var(--seconadry;
+	text-shadow: 1px 1px 10px var(--seconadry);
 }
 .tab-pane.active{
 	height: 80vh;
