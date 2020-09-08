@@ -45,7 +45,8 @@ var speed = 50;
 
 function typeWriter(id,ele,width) {
   var txt=ele.getAttribute("data-disp");
-  document.getElementById(id).style.visibility="visible"
+  document.getElementById(id).style.zIndex="3"
+  document.getElementById(id).style.display="inherit"
   document.getElementById(id).style.width=txt.length+"ch"
   document.getElementById(id).style.animation="typing 3s steps(21, end),  blink-caret .5s step-end infinite alternate"
   if (i < txt.length) {

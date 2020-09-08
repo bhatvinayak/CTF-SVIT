@@ -3,6 +3,8 @@
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
 .demo-1 {
+	--primary: limegreen;
+	--seconadry: lime;
 	--color-text: #fff;
 	--color-bg: #000;
 	--color-link: #f9d77e;
@@ -25,7 +27,15 @@
 	--blend-color-4: transparent;
 	--blend-color-5: #af4949;
 }
+.imgloaded .content__title{
+	width: 8ch;
+	z-index: 3;
+}
+.imgloaded .content__text{
+width: 29ch;
+z-index: 3;
 
+}
 .imgloaded .content__title,
 .imgloaded .content__text {
 	animation-name: glitch-anim-text;
@@ -41,7 +51,7 @@
 .content__title {
 	color: #fff;
 	font-size: 10vw;
-	margin: 35vh 0 0 55vw;
+	margin: 35vh 0 0 50vw;
 	position: absolute;
 	font-family: 'Blender Pro';
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
@@ -52,7 +62,7 @@
 	position: absolute;
 	font-size: 1.5em;
 	color: #fff;
-	margin: 35vh 0 0 55vw;
+	margin: 35vh 0 0 50vw;
 	max-width: 500px;
 	text-align: right;
 	font-weight: 400;
@@ -403,11 +413,11 @@ p{
 	margin: 0;
 	padding: 0;
 	line-height: 1;
-	color: limegreen;
-	text-shadow: 0px 0px 10px limegreen;
+	color: var(--primary);
+	text-shadow: 0px 0px 10px var(--primary);
   }
   .typewriter-text {
-	visibility: hidden;
+	display: none;
 	width: 16.5em; 
 	  width: 21ch;
 	  font: bold 300% Consolas, Monaco, monospace;
@@ -415,7 +425,6 @@ p{
 	  white-space: nowrap;
 	  overflow: hidden;
 	  position: absolute;
-	  z-index: 2;
 	  color:white;
   }
   button{
@@ -436,24 +445,36 @@ p{
 	background-color: rgba(51, 46, 46, 0.623) !important;
 	z-index: 2;
 	margin-top: 1vw;
+	border-radius: 10px;
 }
 a:hover{
-	color: lime;
+	color: var(--seconadry);
+	text-shadow: 0px 0px 10px var(--primary);
 }
 
 .nav-link{
-	color: limegreen;
+	color: var(--primary);
 	font-size: 24px;
 }
 .nav-link.active{
-	color: limegreen !important;	
+	color: var(--primary) !important;	
 	background-color: transparent !important;
-	border: 3px solid lime;
-    box-shadow: 0 0 15px -1px lime, 
-    0 0 12px -1px lime  inset;
+	border: 3px solid var(--seconadry);
+    box-shadow: 0 0 15px -1px var(--seconadry), 
+	0 0 12px -1px var(--seconadry)  inset;
+	text-shadow: 1px 1px 10px var(--seconadry;
 }
 .tab-pane.active{
+	height: 80vh;
+	width: 80vw;
 	color: white !important;
-	z-index: 2;
+	z-index: 3;
 	position: relative;
+}
+#s2{
+	z-index: 3;
+	padding-top: 30vw;
+}
+#home{
+	z-index:3;
 }
