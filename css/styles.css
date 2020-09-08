@@ -5,8 +5,8 @@
 	src: url('./font.otf');
   }
 .demo-1 {
-	--primary: limegreen;
-	--seconadry: lime;
+	--primary: rgb(255, 255, 255);
+	--seconadry: rgb(139, 139, 139);
 	--color-text: #fff;
 	--color-bg: #000;
 	--color-link: #f9d77e;
@@ -53,7 +53,7 @@ z-index: 3;
 .content__title {
 	color: #fff;
 	font-size: 10vw;
-	margin: 35vh 0 0 50vw;
+	margin: 35vh 0 0 45vw;
 	position: absolute;
 	font-family: 'Blender Pro';
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
@@ -444,7 +444,7 @@ p{
 	width: 70vw;
 }
 .navbar{
-	background-color: rgba(51, 46, 46, 0.623) !important;
+	
 	z-index: 2;
 	margin-top: 1vw;
 	border-radius: 10px;
@@ -464,7 +464,7 @@ a:hover{
 	border: 3px solid var(--seconadry);
     box-shadow: 0 0 15px -1px var(--seconadry), 
 	0 0 12px -1px var(--seconadry)  inset;
-	text-shadow: 1px 1px 10px var(--seconadry;
+	text-shadow: 1px 1px 10px var(--seconadry);
 }
 .tab-pane.active{
 	height: 80vh;
