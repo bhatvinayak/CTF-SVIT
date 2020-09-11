@@ -1,0 +1,171 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CTF</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <!-- JavaScript and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+  />
+
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e,
+        t = document.createElement("style");
+      return (
+        (t.innerHTML = "root: { --tmp-var: bold; }"),
+        document.head.appendChild(t),
+        (e = !!(
+          window.CSS &&
+          window.CSS.supports &&
+          window.CSS.supports("font-weight", "var(--tmp-var)")
+        )),
+        t.parentNode.removeChild(t),
+        e
+      );
+    };
+    supportsCssVars() ||
+      alert(
+        "Please view this demo in a modern browser that supports CSS Variables."
+      );
+  </script>
+</head>
+
+<body class="demo-1 loading" onload="loader()">
+  <div class="loader" id="loader">
+    <div id="console"></div>
+  </div>
+  <div id="main">
+    <div class="container navbar">
+        <ul class="col-md nav">
+          <li class="nav-item col-md brand">
+            <a class="nav-link" href="/">CTF 2020</a>
+          </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+      <div class="container tab-pane active show">
+        <form id="reqcode" action="/reqcode">
+          <h1><p>Recover Password</p></h1><br>
+          <label>Email</label>
+          <input type="email" id="username" name="email"><bR>
+            <p class="c-alert emailalert signup"></p><br>
+          <label>New Password</label>
+          <input type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  name="password"><br>
+          <p class="c-alert psalert signup"></p><div id="message">
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>  <br>
+          <button>Get Verification Code</button>
+          <p></p>
+        </form>
+        <form id="submitcode" style="display: none;">
+          <h1><p>Recover Password</p></h1><br>
+          <p class="c-alert otp"></p>
+          <br><bR>
+          <label>Verification Code</label>
+          <input type="number" id="otp" name="otp"><bR>
+            <br>
+          <button>Submit Verification Code</button>
+          <p></p>
+        </form>
+      </div>
+    </div>
+    <div class="content">
+      <div class="glitch">
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script>
+document.getElementById("main").style = "display: none";
+
+  function loader() {
+    setTimeout(loaded, 4000);
+  }
+  function loaded() {
+    document.getElementById("loader").style = "animation: fadeOut; animation-duration: 2s;";
+    document.getElementById("main").style = "animation: fadeIn; animation-duration: 2s;";
+    setTimeout(function(){
+      document.getElementById("loader").style.display="none";
+      document.getElementById("main").style = "display: inherited";
+    },1000)
+  }
+  
+
+  var intervalID = window.setInterval(updateScreen, 200);
+  var c = document.getElementById("console");
+
+  var txt = [
+    "* Starting conf your network device security Starting Bridge socket events into upstart           [OK]",
+    "* Starting configure network device - Stopping cold plug devices                                  [OK]",
+    "* Stopping log initial device creation                                                            [OK]",
+    "* Starting load fallback graphics devices                                                         [OK]",
+    "* Starting configure virtual network devices Stopping load fallback graphics devices              [OK]",
+    "* Stopping configure virtual network devices                                                      [OK]",
+    "* Starting configure network device security                                                      [OK]",
+    "* Starting Userspace bootsplash Stopping Userspace bootsplash Starting Mount network Filesystems  [OK]",
+    "* Stopping Mount network Filesystems                                                              [OK]",
+    "* Starting System V installation compatibility                                                    [OK]",
+    "* Starting configure network device                                                               [OK]",
+    "* Starting Apparmor profiles                                                                      [OK]",
+    "* Checking for running unattended-upgrades                                                        [OK]",
+    "* Stopping System V Installation compa                                                            [OK]",
+    "* Starting System V runlevel compatibility                                                        [OK]",
+    "* Stopping automatic crash report generation                                                      [OK]",
+    "* Starting CPU Interrupts balancing daemon                                                        [OK]",
+    "* Starting deferred execution scheduler                                                           [OK]",
+    "* Starting regular background program processing daemon                                           [OK]",
+    "* Starting Light Display Manager                                                                  [OK]",
+    "* Starting anachronistic cron                                                                     [OK]",
+    "* Starting see kernel messages                                                                    [OK]",
+    "* Stopping saue kernel messages                                                                   [OK]",
+    "* Pulseaudio configured for per-user sessions                                                     [OK]",
+    "* Stopping Susten Runlevel compatibility                                                          [OK]"
+  ];
+
+  var docfrag = document.createDocumentFragment();
+
+  function updateScreen() {
+    //Shuffle the "txt" array
+    txt.push(txt.shift());
+    //Rebuild document fragment
+    txt.forEach(function (e) {
+      var p = document.createElement("p");
+      p.textContent = e;
+      docfrag.appendChild(p);
+    });
+    //Clear DOM body
+    while (c.firstChild) {
+      c.removeChild(c.firstChild);
+    }
+    c.appendChild(docfrag);
+  }
+  </script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/reset.js"></script>
+</html>
