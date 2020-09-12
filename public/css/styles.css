@@ -706,63 +706,7 @@ form h2{
 	content: "✖";
 }
 
-@media screen and (max-width: 560px){
-	#console>p{
-		font-size: 16px;
-		color: #fff;
-	}
-	.content__title {
-		color: #fff;
-		font-size: 10vw;
-		position: absolute;
-		top: 53%;
-		left: 10%;
-		margin: 0;
-		transform: translate(-50%,-50%);
-		font-family: 'Blender Pro' !important;
-		animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
-	}
-	.brand>a{
-		display: block ruby;
-		width: 100vw;
-text-align: center;
-	}
-	.navbar{
-		width: 100vw;
-	}
-	.tab-pane > form {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);	
-	}
-	.links{
-		display: flex;
-		width:100vw;
-		text-align: center;
-	justify-content: center !important;	}
-	.content__text {
-		margin: 0;
-		font-family: 'Blender Pro' !important;
-		font-size: 1.2em;
-		color: #fff;
-		position: absolute;
-		top: 50%;
-		left: 10%;
-		padding: 0;
-		transform: translate(-50%,-50%);		text-align: right;
-		font-weight: 400;
-		animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
-	}
-	.tab-pane{
-		width: 100vw;
-		height: 75vh;
-	}
-	.tab-pane.active{
-		width: 100vw;
-		height: 75vh;
-	}
-}
+
 @media screen and (max-width:800px){
 	.brand>a{
 		display: block;
@@ -820,5 +764,62 @@ text-align: center;
 	top:50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	}
+}
+@media screen and (max-width: 560px){
+	#console>p{
+		font-size: 16px;
+		color: #fff;
+	}
+	.content__title {
+		color: #fff;
+		font-size: 10vw;
+		position: absolute;
+		top: 53%;
+		left: 10%;
+		margin: 0;
+		transform: translate(-50%,-50%);
+		font-family: 'Blender Pro' !important;
+		animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+	}
+	.brand>a{
+		display: block ruby;
+		width: 100vw;
+text-align: center;
+	}
+	.navbar{
+		width: 100vw;
+	}
+	.tab-pane > form {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);	
+	}
+	.links{
+		display: flex;
+		width:100vw;
+		text-align: center;
+	justify-content: center !important;	}
+	.content__text {
+		margin: 0;
+		font-family: 'Blender Pro' !important;
+		font-size: 1.2em;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		padding: 0;
+		transform: translate(-50%,-50%);		text-align: right;
+		font-weight: 400;
+		animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+	}
+	.tab-pane{
+		width: 100vw;
+		height: 75vh;
+	}
+	.tab-pane.active{
+		width: 100vw;
+		height: 75vh;
 	}
 }
