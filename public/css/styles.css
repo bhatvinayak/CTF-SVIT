@@ -16,7 +16,11 @@
 	font-family: 'Blender Pro';
 	src: url('./font.otf');
 }
-
+.row{
+	width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
 body {
 	max-height: 100vh;
 	max-width: 100vw;
@@ -87,7 +91,7 @@ footer {
 .loader {
 	background-color: #000;
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 }
 
 .content__title {
@@ -778,13 +782,14 @@ form h2{
 		display: block ruby;
 		width: 100vw;
 text-align: center;
+padding: 0px;
 	}
 	.navbar{
 		width: 100vw;
 	}
 	.tab-pane > form {
 		position: absolute;
-		top: 35%;
+		top: 40%;
 		left: 50%;
 		transform: translate(-50%,-50%);	
 	}
@@ -793,7 +798,12 @@ text-align: center;
 		width:100vw;
 		text-align: center;
 	justify-content: center !important;
-margin: 0;	}
+margin: 0;
+padding: 0px;
+	}
+	.navbar{
+		padding: 0px;
+	}
 	.content__text {
 		margin: 0;
 		font-family: 'Blender Pro' !important;
