@@ -97,36 +97,36 @@
         <div id="s3" class="row col-md typewriter-text">About CTF
         </div>
     </div>
-    <div id="menu2" class="container tab-pane fade"><br>
+    <div id="menu2" class="container tab-pane fade">
           <form id="signup" action="/signup">
-            <h1><p>Sign Up</p></h1><br>
+            <h2>Sign Up</h2>
             <label>Email</label>
-            <input type="email" id="username" name="email"><bR>
-              <p class="c-alert emailalert signup"></p><br>
+            <input type="email" id="username" name="email">
+              <p class="c-alert emailalert signup"></p>
             <label>Password</label>
-            <input type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  name="password"><br>
+            <input type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  name="password">
             <p class="c-alert psalert signup"></p><div id="message">
               <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
               <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
               <p id="number" class="invalid">A <b>number</b></p>
               <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-            </div>  <br>
+            </div>  
             <button>Sign UP</button>
             <p></p>
           </form>       
     </div>
-    <div id="menu3" class="container tab-pane fade"><br>
+    <div id="menu3" class="container tab-pane fade">
           <form id="login" action="/login">
-            <h1><p>Log In</p></h1><br>
+            <h2>Log In</h2>
             <label>Email</label>
-            <input type="email" id="username" name="email"><bR>
-              <p class="c-alert emailalert login"></p><br>
+            <input type="email" id="username" name="email">
+              <p class="c-alert emailalert login"></p>
             <label>Password</label>
-            <input type="password" id="psw" required  name="password"><br>
-            <p class="c-alert psalert login"></p><br>
-            <button type="submit">Log In</button>
-            <br>
-            <a class="nav-link" href="/forgotps">Forgot Password</a>
+            <input type="password" id="psw" required  name="password">
+            <p class="c-alert psalert login"></p>
+            <span>
+            <button type="submit">Log In</button><a class="nav-link fps" href="/forgotps">Forgot Password</a>
+          </span>
           </form>       
     </div>
   </div>
