@@ -93,17 +93,14 @@ module.exports.ps_post = async (req, res) => {
     var {email,password} = req.body
     if(otp==req.body.otp)
     {
-        console.log("_________")
         try {
             const salt = await bcrypt.genSalt();
             password=await bcrypt.hash(password, salt)
             const user= await User.findOneAndUpdate(email,{password},{new: true});
-            console.log(user)
             const token = createToken(user._id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
     res.status(201).json({ user: user._id });
         } catch (err) {
-            console.log(err)
             res.status(400).json({errors});
         }
     }else{
