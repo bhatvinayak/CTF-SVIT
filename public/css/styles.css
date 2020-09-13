@@ -91,7 +91,7 @@ footer {
 .loader {
 	background-color: #000;
 	width: 100vw;
-	height: auto;
+	height: 100vh;
 }
 
 .content__title {
@@ -758,7 +758,7 @@ form h2{
 }
 @media screen and (min-width:801px){
 	.links{
-		width: 94vw;
+		width: 70vw;
 		padding-top: 15px;
 	}
 }
@@ -824,5 +824,9 @@ padding: 0px;
 	.tab-pane.active{
 		width: 100vw;
 		height: 75vh;
+	}
+	.loader{
+		min-height: 100vh;
+		height: auto;
 	}
 }
