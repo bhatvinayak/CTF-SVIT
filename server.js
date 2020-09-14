@@ -2,6 +2,7 @@ var express = require("express");
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
 const psRoutes = require('./routes/psreset');
+const challengesRoutes = require('./routes/challenges');
 const cookieParser = require('cookie-parser');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware'); 
 
@@ -19,7 +20,7 @@ app.get("/", (req, res) => {
 app.get('/home', requireAuth, (req, res) => res.render('home'));
 app.use(authRoutes);
 app.use(psRoutes);
-
+app.use(challengesRoutes)
 
 const PORT = process.env.PORT || 3000;
 mongoose.connect('mongodb+srv://Rakesh:s2lHIX80lmyWUx6P@cluster0.4qgsg.mongodb.net/ctfsite', {

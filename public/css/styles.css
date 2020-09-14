@@ -1,3 +1,28 @@
+.demo-1 {
+	--primary: rgb(255, 255, 255);
+	--seconadry: limegreen;
+	--color-text: #fff --color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
+
 @keyframes typing {
 	from {
 		width: 0;
@@ -44,30 +69,6 @@ footer {
 	font-family: 'Quicksand', sans-serif !important;
 }
 
-.demo-1 {
-	--primary: rgb(255, 255, 255);
-	--seconadry: limegreen;
-	--color-text: #fff --color-bg: #000;
-	--color-link: #f9d77e;
-	--color-link-hover: #fff;
-	--color-info: #efc453;
-	--glitch-width: 100vw;
-	--glitch-height: 100vh;
-	--gap-horizontal: 10px;
-	--gap-vertical: 5px;
-	--time-anim: 4s;
-	--delay-anim: 2s;
-	--blend-mode-1: none;
-	--blend-mode-2: none;
-	--blend-mode-3: none;
-	--blend-mode-4: none;
-	--blend-mode-5: overlay;
-	--blend-color-1: transparent;
-	--blend-color-2: transparent;
-	--blend-color-3: transparent;
-	--blend-color-4: transparent;
-	--blend-color-5: #af4949;
-}
 
 .imgloaded .content__title {
 	width: 8ch;
@@ -573,7 +574,7 @@ button {
 }
 
 a:hover {
-	color: #FEE996;
+	color: #FEE996 !important;
 }	
 .nav-link{
 	color: #FEE996;
