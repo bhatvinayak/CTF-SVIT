@@ -1,2 +1,200 @@
-<p>User loged IN</p>
-<a href="/logout">Logout</a>
+<html class="js">
+  <head>
+    <meta charset="utf-8" />
+    <title>CTF</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/styles.css">
+ 
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <!-- JavaScript and dependencies -->
+    
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+          var e,
+            t = document.createElement("style");
+          return (
+            (t.innerHTML = "root: { --tmp-var: bold; }"),
+            document.head.appendChild(t),
+            (e = !!(
+              window.CSS &&
+              window.CSS.supports &&
+              window.CSS.supports("font-weight", "var(--tmp-var)")
+            )),
+            t.parentNode.removeChild(t),
+            e
+          );
+        };
+        supportsCssVars() ||
+          alert(
+            "Please view this demo in a modern browser that supports CSS Variables."
+          );
+      </script>
+  </head>
+
+  <body class="demo-1 loading">
+    <div style="z-index: 2;position: absolute;"> 
+        <div class="container navbar">
+            <div class="row">
+              <ul class="col-md nav">
+                <li class="nav-item col-md brand">
+                  <a class="nav-link" href="/">CTF 2020</a>
+                </li>
+              </ul>
+              <ul class="col-md nav nav-pills justify-content-end links" role="tablist">
+                <% if (user) { %>
+                <li class="nav-item">
+                  <a class="nav-link" >Welcome, <%= user.email.split("@")[0] %></a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Log out</a>
+                </li>
+              <% } %>
+               
+            
+              </ul>
+            </div>
+          </div>
+            <div class="content1">
+                <div class="con-cards">
+                    <div class="card1">
+                        <h3>1</h3>
+                        <i class='bx bx-heart'></i>
+                        <div class="con-img">
+                            <img src="./img/flag.png" alt="">
+                            <img class="blur" src="./img/flag.png" alt="">
+                        </div>
+                        <div class="con-text">
+                            <h2>
+                                Easy-Peasy
+                            </h2>
+                            <p>
+                                Beleive me it's the easiest flag you can ever find!! 
+                                                       </p>
+                            <a id="btn" href="/challenge1">Get the Flag</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <h3>2</h3>
+                        <i class='bx bx-heart'></i>
+                        <div class="con-img">
+                            <img src="./img/flag.png" alt="">
+                            <img class="blur" src="./img/flag.png" alt="">
+                        </div>
+                        <div class="con-text">
+                            <h2>
+                                Assassins Creed
+                            </h2>
+                            <p>
+                                It is a series of video games, comics, books, and shorts of historical fiction. Video games are action-adventure, stealth and open world.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <h3>3</h3>
+                        <i class='bx bx-heart'></i>
+                        <div class="con-img">
+                            <img src="./img/flag.png" alt="">
+                            <img class="blur" src="./img/flag.png" alt="">
+                        </div>
+                        <div class="con-text">
+                            <h2>
+                                Assassins Creed
+                            </h2>
+                            <p>
+                                It is a series of video games, comics, books, and shorts of historical fiction. Video games are action-adventure, stealth and open world.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <h3>4</h3>
+                        <i class='bx bx-heart'></i>
+                        <div class="con-img">
+                            <img src="./img/flag.png" alt="">
+                            <img class="blur" src="./img/flag.png" alt="">
+                        </div>
+                        <div class="con-text">
+                            <h2>
+                                Assassins Creed
+                            </h2>
+                            <p>
+                                It is a series of video games, comics, books, and shorts of historical fiction. Video games are action-adventure, stealth and open world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+    </div>
+    <div class="glitch">
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+      </div>
+  </body>
+      <script src="./js/imagesloaded.pkgd.min.js"></script>
+  <script>
+      	setTimeout(() => document.body.classList.add('render'), 60);
+	const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
+	const total = navdemos.length;
+	const current = navdemos.findIndex(el => el.classList.contains('demo--current'));
+	const navigate = (linkEl) => {
+		document.body.classList.remove('render');
+		document.body.addEventListener('transitionend', () => window.location = linkEl.href);
+	};
+	navdemos.forEach(link => link.addEventListener('click', (ev) => {
+		ev.preventDefault();
+		navigate(ev.target);
+	}));
+	document.addEventListener('keydown', (ev) => {
+		const keyCode = ev.keyCode || ev.which;
+		let linkEl;
+		if ( keyCode === 37 ) {
+			linkEl = current > 0 ? navdemos[current-1] : navdemos[total-1];
+		}
+		else if ( keyCode === 39 ) {
+			linkEl = current < total-1 ? navdemos[current+1] : navdemos[0];
+		}
+		else {
+			return false;
+		}
+		navigate(linkEl);
+	});
+	imagesLoaded('.glitch__img', { background: true }, () => {
+		document.body.classList.remove('loading');
+		document.body.classList.add('imgloaded');
+	});
+  </script>
+  <script>
+          const next = document.querySelector('#next')
+    const prev = document.querySelector('#prev')
+
+    function handleScrollNext (direction) {
+        const cards = document.querySelector('.con-cards')
+        cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+    }
+    function handleScrollPrev (direction) {
+        const cards = document.querySelector('.con-cards')
+        cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+    }
+
+    next.addEventListener('click', handleScrollNext)
+    prev.addEventListener('click', handleScrollPrev)
+  </script>
+   <script
+   src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+   crossorigin="anonymous"
+ ></script>
+ <script
+   src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+   integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+   crossorigin="anonymous"
+ ></script>
+</html>
