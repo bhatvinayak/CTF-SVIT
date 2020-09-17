@@ -5,6 +5,7 @@ const psRoutes = require('./routes/psreset');
 const challengesRoutes = require('./routes/challenges');
 const cookieParser = require('cookie-parser');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware'); 
+require('dotenv').config()
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(psRoutes);
 app.use(challengesRoutes)
 
 const PORT = process.env.PORT || 3000;
-mongoose.connect('mongodb+srv://Rakesh:s2lHIX80lmyWUx6P@cluster0.4qgsg.mongodb.net/ctfsite', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,

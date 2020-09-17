@@ -13,8 +13,8 @@ const createToken = (id) => {
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'osesvit2021@gmail.com',
-      pass: '9901735897'
+      user: process.env.email,
+      pass: process.env.password
     }
   });
 

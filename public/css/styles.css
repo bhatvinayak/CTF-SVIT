@@ -830,5 +830,8 @@ padding: 0px;
 		min-height: 100vh;
 		height: auto;
 	}
+	.justify-content-end {
+		justify-content: center !important;
+	}
 }
 
